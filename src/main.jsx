@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { EcommerceApp } from './EcommerceApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import './css/queries.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
