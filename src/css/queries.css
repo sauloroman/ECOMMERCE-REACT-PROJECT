@@ -155,7 +155,7 @@
       }
 
       .purchaseItem {
-            padding: 2rem;
+            padding: 1rem;
       }
 
       .purchaseItem__header {
@@ -168,6 +168,14 @@
 
       .category__results {
             margin: 0;
+      }
+
+      .userpage__cart {
+            display: unset;
+      }
+
+      .userpage__item {
+            font-size: 1.6rem;
       }
 
 }

@@ -527,7 +527,7 @@ p {
       background-color: #fff;
       padding: 2rem;
       margin: 5rem auto;
-      width: 50rem;
+      max-width: 50rem;
       border: 1px solid #ddd;
       border-radius: 5px;
 }
