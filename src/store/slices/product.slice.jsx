@@ -18,7 +18,7 @@ export const getProductThunk = id => dispatch => {
 
       dispatch( setIsLoading( true) );
 
-      axios.get(`https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`)
+      axios.get(`https://e-commerce-api.academlo.tech/api/v1/products/${id}`)
             .then( res => dispatch( setProduct(res.data.data.product) ) )
             .finally( () => dispatch( setIsLoading( false ) ) );
 

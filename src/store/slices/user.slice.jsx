@@ -20,7 +20,7 @@ export const LoginUserThunk = user => dispatch => {
 
       dispatch( setIsLoading( true ) );
 
-      return axios.post(`https://ecommerce-api-react.herokuapp.com/api/v1/users/login`, user )
+      return axios.post(`https://e-commerce-api.academlo.tech/api/v1/users/login`, user )
             .then( res => dispatch( setUser( res.data.data ) ) )
             .catch( err => dispatch( setTextError( err.response.data.message ) ) )
             .finally( () => dispatch( setIsLoading( false ) ) )
@@ -30,7 +30,7 @@ export const LoginUserThunk = user => dispatch => {
 export const createUserThunk = userInfo => dispatch => {
       dispatch( setIsLoading( true ) );
 
-      return axios.post(`https://ecommerce-api-react.herokuapp.com/api/v1/users`, userInfo )
+      return axios.post(`https://e-commerce-api.academlo.tech/api/v1/users`, userInfo )
             .catch( err => dispatch( setTextError( err.response.data.message ) ) )
             .finally( () => dispatch( setIsLoading( false ) ) )
 }

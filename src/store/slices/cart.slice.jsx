@@ -19,7 +19,7 @@ export const getUserCartThunk = () => dispatch => {
 
       dispatch( setIsLoading( true ));
 
-      return axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/cart', getConfig() )
+      return axios.get('https://e-commerce-api.academlo.tech/api/v1/cart', getConfig() )
             .then( res => dispatch( onSetCart( res.data.data.cart.products ) ) ) 
             .catch( err => console.log( err ))
             .finally( () => dispatch( setIsLoading( false ) ))
@@ -28,7 +28,7 @@ export const getUserCartThunk = () => dispatch => {
 
 export const postProductOnCartThunk = product => (dispatch) => {
 
-      return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', product, getConfig() )
+      return axios.post('https://e-commerce-api.academlo.tech/api/v1/cart', product, getConfig() )
             .then( () => dispatch( getUserCartThunk() ) )    
             .catch( err => alert( err.response.data.message ) )
 
@@ -36,14 +36,14 @@ export const postProductOnCartThunk = product => (dispatch) => {
 
 export const deleteProductOnCartThunk = id => (dispatch) => {
 
-      return axios.delete(`https://ecommerce-api-react.herokuapp.com/api/v1/cart/${id}`, getConfig() )
+      return axios.delete(`https://e-commerce-api.academlo.tech/api/v1/cart/${id}`, getConfig() )
             .then( () => dispatch( getUserCartThunk() ) )
 
 }
 
 export const updateProductOnCartThunk = product => dispatch => {
 
-      return axios.patch('https://ecommerce-api-react.herokuapp.com/api/v1/cart', product, getConfig() )
+      return axios.patch('https://e-commerce-api.academlo.tech/api/v1/cart', product, getConfig() )
             .then( () => dispatch( getUserCartThunk() ));
 
 }
